@@ -1,0 +1,53 @@
+{
+  "name": "revisely",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/clerk-react": "^5.31.4",
+    "@clerk/nextjs": "^6.19.4",
+    "@google/genai": "^1.0.0",
+    "@google/generative-ai": "^0.24.1",
+    "@sendgrid/mail": "^8.1.5",
+    "axios": "^1.9.0",
+    "bcryptjs": "^3.0.2",
+    "cloudinary": "^2.6.1",
+    "cookie": "^1.0.2",
+    "crypto-js": "^4.2.0",
+    "express": "^5.1.0",
+    "formidable": "^3.5.4",
+    "jose": "^6.0.11",
+    "jsonwebtoken": "^9.0.2",
+    "jwt-decode": "^4.0.0",
+    "lucide-react": "^0.513.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.15.0",
+    "next": "^15.5.26",
+    "openai": "^4.100.0",
+    "pdf-parse": "^1.1.1",
+    "razorpay": "^2.9.6",
+    "react": "^19.3.0",
+    "react-confetti": "^6.4.0",
+    "react-dom": "^19.3.0",
+    "react-icons": "^5.5.0",
+    "react-use": "^17.6.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9",
+    "eslint-config-next": "^15.5.26",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^4.1.8"
+  },
+  "description": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).",
+  "main": "server.js",
+  "author": "nilesh chaubey",
+  "license": "ISC"
+}
