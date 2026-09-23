@@ -26,6 +26,7 @@ export default function Navbar() {
   const handleLogout = async () => {
     await fetch("/api/logout", { method: "POST" });
     localStorage.removeItem("email");
+    localStorage.removeItem("name");
     localStorage.removeItem("mcqs");
     setManualLoggedIn(false);
     router.replace("/login");

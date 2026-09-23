@@ -260,13 +260,15 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(false);
   const [generating, setGenerating] = useState(false);
   const [email, setEmail] = useState(null);
+  const [name, setName] = useState(null);
   const [storageLoaded, setStorageLoaded] = useState(false);
   const [dragActive, setDragActive] = useState(false);
 
-  // Load email from localStorage
+  // Load email and name from localStorage
   useEffect(() => {
     const storedEmail = localStorage.getItem('email');
     setEmail(storedEmail);
+    setName(localStorage.getItem('name'));
     setStorageLoaded(true);
   }, []);
 
@@ -414,7 +416,7 @@ export default function Dashboard() {
   const handleViewHistory = () => router.push('/history');
 
   const quickCounts = [5, 10, 20, 30];
-  const displayName = email ? email.split('@')[0] : '';
+  const displayName = name || (email ? email.split('@')[0] : '');
   const canGenerate = Boolean(file) && Number(mcqCount) > 0 && tickets > 0 && !generating;
 
   const Loader = ({ label }) => (

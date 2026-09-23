@@ -130,9 +130,11 @@ export default function Login() {
 
     try {
       const response = await axios.post("/api/login", { email, password });
-      const { token } = response.data;
+      const { token, user } = response.data;
       //localStorage.setItem("token", token);
       localStorage.setItem("email", email);
+      if (user?.name) localStorage.setItem("name", user.name);
+      else localStorage.removeItem("name");
       router.push("/dashboard");
     } catch (error) {
       setErrorMsg(error?.response?.data?.error || "Login failed. Please try again.");
